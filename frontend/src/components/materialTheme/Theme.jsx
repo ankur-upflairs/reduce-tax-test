@@ -22,6 +22,12 @@ theme = createTheme(theme, {
       },
       name: 'blue',
     }),
+    text: theme.palette.augmentColor({
+      color: {
+        main: '#243e63',
+      },
+      name: 'text',
+    }),
   },
 });
 
