@@ -7,6 +7,12 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import  AuthProvider  from "./context/AuthContext";
 import SignUpPage from "./pages/SignUp";
 import SignupPage from "./pages/SignupBlackbox";
+import Signup from "./pages/Signup1";
+import LoginPage from "./pages/Login";
+import BlogPage from './blogs/BlogPage'
+import BlogForm from "./blogs/CreateBlog";
+import IncomeForm from "./userForm/IncomeSources";
+import UserForm from "./userForm/UserForm";
 function App() {
   const [count, setCount] = useState(0);
   return (
@@ -21,9 +27,12 @@ function App() {
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
             {/* <Route path="/login" element={<LoginPage />} /> */}
-            <Route path="/signup" element={<SignUpPage/>} />
+            <Route path="/signup" element={<Signup/>} />
             <Route path="signup1" element={<SignupPage/>} />
-
+            <Route path='login' element={<LoginPage/>} />
+            <Route path='blogs' element={<BlogPage/>} />
+            <Route path='create' element={<BlogForm/>}/>
+            <Route path='userform' element={<UserForm/>}/>
             {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
 
             {/* Grouped Admin Routes - Nested under RoleProtectedRoute */}
