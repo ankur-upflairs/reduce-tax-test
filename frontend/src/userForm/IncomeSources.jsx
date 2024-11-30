@@ -123,11 +123,6 @@ const IncomeForm = () => {
                 </Grid>
               </React.Fragment>
             ))}
-            <Grid item xs={12} size={12}>
-              <Button type="submit" variant="contained" color="primary" fullWidth>
-                Submit
-              </Button>
-            </Grid>
           </Grid>
         </form>
       </Box>
