@@ -6,7 +6,7 @@ import FinancialDetailsForm from './FinancialDetails'
 import BasicDetails2 from './BasicDetails2'
 import BankAndAadhaarDetails from './BankDetails'
 import ExtraDetails from './ExtraDetails'
-import TaxesPaidPage from './PrepaidTaxes'
+import PrepaidTaxes from './PrepaidTaxes'
 
 function UserForm() {
   return (
@@ -18,7 +18,7 @@ function UserForm() {
       <BasicDetails2/>
       <BankAndAadhaarDetails/>
       <ExtraDetails/>
-      <TaxesPaidPage/>
+      <PrepaidTaxes/>
     </div>
   )
 }
