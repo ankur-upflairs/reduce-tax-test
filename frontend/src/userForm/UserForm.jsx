@@ -5,6 +5,7 @@ import UploadForm16 from './UplodeForm16'
 import FinancialDetailsForm from './FinancialDetails'
 import BasicDetails2 from './BasicDetails2'
 import BankAndAadhaarDetails from './BankDetails'
+import ITRForm from './ExtraDetails'
 
 function UserForm() {
   return (
@@ -15,6 +16,7 @@ function UserForm() {
       <BasicDetails/>
       <BasicDetails2/>
       <BankAndAadhaarDetails/>
+      <ITRForm/>
     </div>
   )
 }
