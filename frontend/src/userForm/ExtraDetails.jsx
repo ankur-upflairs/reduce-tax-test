@@ -13,7 +13,7 @@ import {
   ListItem
 } from "@mui/material";
 
-const ITRForm = () => {
+const ExtraDetails = () => {
   const [formData, setFormData] = useState({
     filingType: "Return Filed Against Notice",
     noticeSection: "139(9)",
@@ -232,4 +232,4 @@ const ITRForm = () => {
   );
 };
 
-export default ITRForm;
+export default ExtraDetails;
