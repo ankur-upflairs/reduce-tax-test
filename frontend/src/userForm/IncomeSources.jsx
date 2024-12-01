@@ -19,32 +19,32 @@ const questions = [
   {
     id: "q1",
     question: "Income from Salary/Pension?",
-    info: "This includes all salary and pension income received during the financial year.",
+    info: "Did you earn any income from Salary or Pension? You can simply upload your From 16 and we shall prepare your ITR automatically or you can fill the details manually like deductions, TDS etc.",
   },
   {
     id: "q2",
     question: "Income from House Property (Home Loan/Rental Income, etc)?",
-    info: "Includes income or loss from house properties, rental income, or deductions for home loans.",
+    info: "Do you own a house & Earn Rent? Fill in detils of your House Property incomes here. Further do you have Home Loan? You can claim deduction on interest of your home loan.",
   },
   {
     id: "q3",
     question: "Income from Business/Profession?",
-    info: "Covers income earned from business activities or professional services.",
+    info: "Selects if:  (a) You own a small business or (b) You are a contractor or  (c) You earn as Freelancer.",
   },
   {
     id: "q4",
     question: "Income from Capital Gains (Shares/Mutual Funds/Property etc)?",
-    info: "Capital gains include profits from selling shares, mutual funds, property, or other capital assets.",
+    info: "Did you sell any Mutual Funds, shares, property, etc? Enter the details of your securities(equity and debentures) and properties. Upload your broker statement and we shall prepare your ITR.",
   },
   {
     id: "q5",
     question: "Income from Other Sources?",
-    info: "Includes income from dividends, interest, winnings from lotteries, or other sources.",
+    info: "Selects this if you have any of these incomes-you have received gifts or interst on Fixed deposits or interest from PPF, Dividend Income or income from Mutual Funds ets.",
   },
   {
     id: "q6",
     question: "Income from Foreign Source?",
-    info: "Includes income earned from foreign employment, investments, or other sources abroad.",
+    info: "Did you receive any income from a foreign source? Then you can opt for our CA Assisted Plans. Our Expert CAs who have years of expertise in foreign taxation and tax treaties ensures that uour return filing is smooth and hassle-free.",
   },
 ];
 
@@ -64,20 +64,26 @@ const IncomeForm = () => {
   };
 
   return (
-    <Container maxWidth="lg">
+    <>
+    <Typography variant="h5" sx={{ fontWeight: "bold", mb: 1 ,mt:5 , color: "#333", textAlign: "center", color: "#253243", fontSize:"28px" }}>
+    Income Tax Return (ITR) Filing for FY 2023-24 (AY 2024-25)
+    </Typography>
+    <Typography variant="body2"  sx={{ mb: 2 , textAlign: "center" , color: "#555" }}>
+    Tax2win simplifies e-filing your Income Tax Return! Take the first step towards ITR filing.
+    Choose your income source and file ITR today!
+    </Typography>
+    <Container maxWidth="md" sx={{ mt: 4 }}>
       <Box
         sx={{
-          p: 4,
+          p: 2,
           boxShadow: 3,
           borderRadius: 2,
           backgroundColor: "white",
-          maxWidth: "lg",
+          color:"#0a2342",
+          maxWidth: "100%",
           margin: "0 auto",
         }}
       >
-        <Typography variant="h5" gutterBottom align="center">
-          Income Details
-        </Typography>
         <form onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             {questions.map((item, index) => (
@@ -111,8 +117,8 @@ const IncomeForm = () => {
                     </Grid>
                     <Grid item>
                       <Tooltip title={item.info} arrow>
-                        <IconButton size="small">
-                          <InfoIcon color="primary" />
+                        <IconButton size="small" >
+                          <InfoIcon color="gray" />
                         </IconButton>
                       </Tooltip>
                     </Grid>
@@ -127,6 +133,7 @@ const IncomeForm = () => {
         </form>
       </Box>
     </Container>
+    </>
   );
 };
 
